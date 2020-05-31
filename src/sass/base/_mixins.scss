@@ -1,0 +1,15 @@
+@mixin h1 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 105px;
+}
+
+@mixin h2 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+}

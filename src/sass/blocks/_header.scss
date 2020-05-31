@@ -1,0 +1,14 @@
+.header {
+    padding: 21px 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        display: block;
+    }
+}
