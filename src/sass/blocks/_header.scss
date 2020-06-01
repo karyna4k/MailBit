@@ -1,14 +1,177 @@
 .header {
+    position: relative;
     padding: 21px 0;
     &__wrapper {
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
     &__menu {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
     }
     &__logo {
         display: block;
+    }
+    &__info {
+        display: flex;
+        @media (max-width: 659px) {
+            margin-right: 66px;
+        }
+    }
+    &__login {
+        position: relative;
+        margin-right: 92px;
+        @media (max-width: 890px) {
+            margin-right: 36px;
+        }
+        a {
+            color: #060402;
+            font-family: Kanit;
+            font-size: 14px;
+            font-weight: 400;
+            @media (max-width: 890px) {
+                span {
+                    display: none;
+                }
+            }
+            img {
+                display: none;
+                @media (max-width: 890px) {
+                    display: block;
+                    height: 24px;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 14px;
+            right: -10px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid red;
+            @media (max-width: 890px) {
+                display: none;
+            }
+        }
+    }
+    &__lang {
+        position: relative;
+        &::before {
+            content: url(../icons/TH.svg);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 27px;
+            @media (max-width: 890px) {
+                display: none;
+            }
+        }
+        a {
+            color: $gray;
+            font-family: Kanit;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            @media (max-width: 890px) {
+                span {
+                    display: none;
+                }
+            }
+            img {
+                display: none;
+                @media (max-width: 890px) {
+                    display: block;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    list-style-type: none;
+    @media (max-width: 659px) {
+        position: fixed;
+        flex-direction: column; //чтобы скучить значения
+        justify-content: center; //чтобы скучить значения
+        align-items: center; //чтобы скучить значения
+        top: 0;
+        left: -100%; //спрятанное меню, которое будет выплывать слева
+        width: 100%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: rgba(0, 0, 0, .8);
+        transition: 0.6s all;
+        &_active {
+            left: 0 //когда класс активирован - меню выплывает слева
+        }
+    }
+    &__item {
+        margin-right: 4vw;
+        &:last-child {
+            margin: 0;
+        }
+        a {
+            color: $black;
+            font-family: Kanit;
+            font-size: 14px;
+            font-weight: 400;
+            &:hover {
+                text-decoration: none;
+                border-bottom: 2px solid $main-color;
+            }
+            @media (max-width: 659px) {
+                color: #fff;
+                font-size: 23px;
+            }
+        }
+        @media (max-width: 659px) {
+            padding-right: 0; //выключаем точки сбоку
+            border-right: none; //выключаем точки сбоку
+            margin: 10px 0; //чтобы раздвинуть значения
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    @media (max-width: 659px) {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 24px; //чтобы корректно отрабатывали палочки при клике, 12 потому что 3*2px(height) + 3*2px(margin-bottom)
+        span {
+            display: block;
+            margin-bottom: 8px;
+            height: 2px;
+            width: 100%;
+            background-color: $black;
+            transition: 0.5s all;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        &_active {
+            span {
+                margin-bottom: -2px;
+                background-color: #fff;
+                &:nth-child(1) {
+                    transform: translateY(11px) rotate(-45deg)
+                }
+                &:nth-child(2) {
+                    display: none
+                }
+                &:nth-child(3) {
+                    transform: translateY(11px) rotate(45deg)
+                }
+            }
+        }
     }
 }

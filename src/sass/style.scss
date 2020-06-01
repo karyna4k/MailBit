@@ -1,12 +1,16 @@
 @import 'lib/bootstrap-reboot.min';
 @import 'lib/font';
+@import 'base/variables';
+@import 'base/mixins';
 * {
     box-sizing: border-box;
     font-family: Kanit, serif;
+    margin: 0;
 }
 
-body {
+ul {
     margin: 0;
+    padding: 0;
 }
 
 img {
@@ -15,8 +19,15 @@ img {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 5px;
+    }
 }
 
 @import 'blocks/header';
