@@ -14,4 +14,27 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('nav_active');
         })
     })
+
+
+    //modal
+
 })
+
+$('input[name=tel]').mask("+1 (999) 999-99-99");
+
+
+// Modal
+
+let button = document.querySelector('.promo__button'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector('.modal__close');
+
+button.addEventListener('click', function() {
+    overlay.style.display = 'block';
+
+});
+
+close.addEventListener('click', function() {
+    overlay.style.display = 'none';
+
+});

@@ -1,0 +1,18 @@
+.button {
+    width: 266px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(177.93deg, #A91D1C 6.92%, #ED1B24 93.08%);
+    color: #ffffff;
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    &_submit {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 200px;
+    }
+}

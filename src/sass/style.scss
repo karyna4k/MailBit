@@ -18,6 +18,10 @@ img {
     height: auto;
 }
 
+.accent {
+    color: $main-color;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,3 +35,5 @@ img {
 }
 
 @import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/modals';

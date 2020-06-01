@@ -53,15 +53,38 @@
             <div class="container">
                 <h1 class="promo__header">Messaging & More</h1>
                 <div class="promo__text">
-                    Let the world know! Broadcast your message within seconds using MailBIT API:
+                    <span class="accent">Let the world know!</span> Broadcast your message within seconds using MailBIT API:
                 </div>
 
                 <button class="promo__button button">Contact sales</button>
             </div>
+
+            <img src="img/dots.svg" alt="" class="promo__big-dots">
+            <img src="img/dots-horiz.svg" alt="" class="promo__horizontal-dots">
         </div>
+
+
 
     </header>
 
+
+    <div class="overlay">
+        <div class="modal" id="modal">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Contact our sales service</div>
+            <form class="feed-form" action="#">
+                <input name="name" placeholder="Your Name" type="text">
+                <input name="email" placeholder="Your Email" type="email">
+                <input name="tel" placeholder="Your Phone">
+
+
+                <button class="button button_submit">Send Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
