@@ -30,8 +30,7 @@
                 margin-right: 36px;
             }
             a {
-                color: #060402;
-                font-family: Kanit;
+                color: $black;
                 font-size: 14px;
                 font-weight: 400;
                 @media (max-width: 890px) {
@@ -56,7 +55,7 @@
                 right: -10px;
                 border-left: 4px solid transparent;
                 border-right: 4px solid transparent;
-                border-top: 4px solid red;
+                border-top: 4px solid $main-color;
                 @media (max-width: 890px) {
                     display: none;
                 }
@@ -76,7 +75,6 @@
             }
             a {
                 color: $gray;
-                font-family: Kanit;
                 font-size: 14px;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -99,18 +97,18 @@
         list-style-type: none;
         @media (max-width: 659px) {
             position: fixed;
-            flex-direction: column; //чтобы скучить значения
-            justify-content: center; //чтобы скучить значения
-            align-items: center; //чтобы скучить значения
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             top: 0;
-            left: -100%; //спрятанное меню, которое будет выплывать слева
+            left: -100%;
             width: 100%;
             height: 100vh;
             padding: 20px 15px;
             background-color: rgba(0, 0, 0, .8);
             transition: 0.6s all;
             &_active {
-                left: 0 //когда класс активирован - меню выплывает слева
+                left: 0
             }
         }
         &__item {
@@ -120,7 +118,6 @@
             }
             a {
                 color: $black;
-                font-family: Kanit;
                 font-size: 14px;
                 font-weight: 400;
                 &:hover {
@@ -133,9 +130,9 @@
                 }
             }
             @media (max-width: 659px) {
-                padding-right: 0; //выключаем точки сбоку
-                border-right: none; //выключаем точки сбоку
-                margin: 10px 0; //чтобы раздвинуть значения
+                padding-right: 0;
+                border-right: none;
+                margin: 10px 0;
             }
         }
     }
@@ -190,7 +187,6 @@
             position: relative;
             width: 55%;
             color: $gray;
-            font-family: Kanit;
             font-size: 24px;
             font-weight: 400;
             z-index: 2;

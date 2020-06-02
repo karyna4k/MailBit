@@ -4,7 +4,6 @@
     &__label {
         position: relative;
         color: $main-color;
-        font-family: Kanit;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 4px;
@@ -18,11 +17,13 @@
         margin-top: 10px;
         @include h2;
         text-align: center;
-        z-index: 1;
+        z-index: 2;
     }
     &__divider {
+        position: relative;
         margin: 0 auto;
         margin-top: 20px;
+        z-index: 2;
     }
     &__wrapper {
         margin-top: 60px;
@@ -61,7 +62,7 @@
     width: 32%;
     height: 380px;
     border: 1px solid #C4C4C4;
-    background: url(../../img/phone.svg) center center no-repeat;
+    background: url(../img/phone.svg) center center no-repeat;
     @media (max-width: 1165px) {
         width: 45%;
     }
@@ -80,7 +81,6 @@
     &-title {
         margin-top: 34px;
         color: $black;
-        font-family: Kanit;
         font-size: 24px;
         font-weight: 400;
         letter-spacing: 2px;
@@ -91,8 +91,6 @@
     &-text {
         margin-top: 22px;
         width: 85%;
-        color: #202020;
-        font-family: Kanit;
         font-size: 16px;
         font-weight: 200;
         letter-spacing: 2px;
