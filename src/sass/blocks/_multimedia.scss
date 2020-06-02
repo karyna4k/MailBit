@@ -1,0 +1,43 @@
+.multimedia {
+    padding-top: 80px;
+    min-height: 870px;
+    &__title {
+        @include h2;
+        position: relative;
+        z-index: 2;
+    }
+    &__divider {
+        margin-top: 20px;
+    }
+    &__text {
+        margin-top: 60px;
+        width: 60%;
+        font-weight: 400;
+        @include adaptiv-font(24, 18);
+        line-height: 150%;
+        position: relative;
+        z-index: 2;
+    }
+    &__more {
+        margin-top: 16px;
+        font-weight: 400;
+        @include adaptiv-font(24, 18);
+        position: relative;
+        z-index: 2;
+        a {
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        position: absolute;
+        max-height: 695px;
+        padding-bottom: 15%;
+        padding-left: 15%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

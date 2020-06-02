@@ -26,12 +26,18 @@ $('input[name=tel]').mask("+1 (999) 999-99-99");
 // Modal
 
 let button = document.querySelector('.promo__button'),
+    buttonLink = document.querySelector('.multimedia__more a'),
     overlay = document.querySelector('.overlay'),
     close = document.querySelector('.modal__close');
 
 button.addEventListener('click', function() {
     overlay.style.display = 'block';
 
+});
+
+buttonLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    overlay.style.display = 'block';
 });
 
 close.addEventListener('click', function() {
