@@ -195,7 +195,12 @@
             }
         }
         &__button {
+            display: block;
             margin-top: 43px;
+            @media (max-width: 445px) {
+                margin: 0 auto;
+                margin-top: 43px;
+            }
         }
         &__big-dots {
             display: block;
@@ -211,6 +216,9 @@
             bottom: 0;
             left: 0;
             z-index: 1;
+            @media (max-width: 890px) {
+                display: none;
+            }
         }
     }
 }
