@@ -1,0 +1,105 @@
+.services {
+    padding-top: 60px;
+    max-height: 1000px;
+    &__label {
+        position: relative;
+        color: $main-color;
+        font-family: Kanit;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        line-height: 125%;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 2;
+    }
+    &__title {
+        position: relative;
+        margin-top: 10px;
+        @include h2;
+        text-align: center;
+        z-index: 1;
+    }
+    &__divider {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 1165px) {
+            justify-content: space-around;
+        }
+        // @media (max-width: 806px) {
+        //     flex-direction: column;
+        // }
+    }
+    &__item {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(4) {
+            margin-bottom: 0;
+            @media (max-width: 790px) {
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(5) {
+            margin-bottom: 0;
+            @media (max-width: 790px) {
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(6) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.item {
+    width: 32%;
+    height: 380px;
+    border: 1px solid #C4C4C4;
+    background: url(../../img/phone.svg) center center no-repeat;
+    @media (max-width: 1165px) {
+        width: 45%;
+    }
+    @media (max-width: 890px) {
+        width: 48%;
+    }
+    @media (max-width: 790px) {
+        width: 80%;
+    }
+    @media (max-width: 475px) {
+        width: 95%;
+    }
+    &-logo {
+        display: block;
+    }
+    &-title {
+        margin-top: 34px;
+        color: $black;
+        font-family: Kanit;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 24px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &-text {
+        margin-top: 22px;
+        width: 85%;
+        color: #202020;
+        font-family: Kanit;
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        line-height: 140%;
+        text-align: center;
+    }
+}

@@ -1,4 +1,6 @@
 .button {
+    position: relative;
+    z-index: 2;
     width: 266px;
     height: 60px;
     border: none;
@@ -9,6 +11,9 @@
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
+    &:focus {
+        outline: none;
+    }
     &_submit {
         display: block;
         margin: 0 auto;

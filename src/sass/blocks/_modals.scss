@@ -1,6 +1,7 @@
 .overlay {
     display: none;
     position: fixed;
+    z-index: 10;
     width: 100%;
     height: 100%;
     top: 0;
@@ -11,7 +12,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 380px;
+        width: 320px;
         min-height: 400px;
         background-color: #f2f2f2;
         padding: 38px 40px 40px 40px;
@@ -23,6 +24,9 @@
             line-height: 21px;
             color: $main-color;
             cursor: pointer;
+            @media (max-width: 445px) {
+                right: 15px;
+            }
         }
         &__subtitle {
             @include h2;
@@ -35,9 +39,10 @@
     margin-top: 36px;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 240px;
     input {
         height: 50px;
+        width: 240px;
         border-radius: 5px;
         background-color: #fff;
         margin-bottom: 15px;

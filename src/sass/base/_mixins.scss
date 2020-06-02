@@ -2,8 +2,8 @@
     font-family: Kanit;
     font-style: normal;
     font-weight: 400;
-    font-size: 70px;
-    line-height: 105px;
+    @include adaptiv-font(70, 49);
+    line-height: 150%;
 }
 
 @mixin h2 {
@@ -11,5 +11,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
+    @include adaptiv-font(40, 30);
     line-height: 100%;
+}
+
+$maxWidth: 1536;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
